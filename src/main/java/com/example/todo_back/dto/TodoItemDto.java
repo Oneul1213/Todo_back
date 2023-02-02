@@ -6,5 +6,5 @@ import lombok.Data;
 public class TodoItemDto {
     private Long id;
     private String text;
-    private boolean isDone;
+    private Boolean isDone;
 }

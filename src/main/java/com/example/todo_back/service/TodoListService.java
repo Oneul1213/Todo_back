@@ -21,6 +21,19 @@ public class TodoListService {
         return todoListRepository.selectAllItems();
     }
 
+    public void saveTodoItem(TodoItemDto todoItem) {
+        todoListRepository.insertItem(todoItem);
+    }
+
+    public void deleteTodoItemById(Long id) {
+        todoListRepository.deleteItemById(id);
+    }
+
+    public void updateTodoItem(TodoItemDto todoItem) {
+        // System.out.println("TodoItem.isDone = " + todoItem.getIsDone());
+        todoListRepository.updateItem(todoItem);
+    }
+
     public void saveTodoList(List<TodoItemDto> todoList) {
         for (TodoItemDto item : todoList) {
             todoListRepository.insertItem(item);
